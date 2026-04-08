@@ -24,3 +24,7 @@ jobs:
 
       - name: Test AWS Access
         run: aws s3 ls
+      - name: Upload file to S3
+        run: |
+             echo "Hello from GitHub OIDC" > file.txt
+             aws s3 cp file.txt s3://demo-git-aws/
